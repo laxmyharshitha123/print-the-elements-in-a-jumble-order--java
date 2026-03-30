@@ -1,0 +1,31 @@
+## print the elements in a jumble order
+1 20 19 18 17
+2  3  16 15 14
+4 5 6 13 12
+7 8 9 10 11
+solution : public class pattern{
+             public static void main(Strings[] args){
+                   int rows = 4;
+                   int cols = 5;
+                   int arr[][]arr = new int[rows][cols];
+                   int start = 1;
+                   int end = rows * cols;
+                   for (int i = 0;i<rows;i++){
+                      for (int j = 0;j<cols;j++){
+                        if(i>=j){
+                            arr[i][j] = start++;
+                        }else{
+                             arr[i][j] = end--;
+                        }
+                      }
+                    }
+                     for (int i = 0;i<rows;i++){
+                       for(int j = 0;j<cols;j++){
+                           System.out.println(arr[i][j] + "/t");
+                         }
+                           System.out.println();
+                     }
+                  }
+                }
+                        
+                          
